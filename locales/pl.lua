@@ -11,5 +11,5 @@ Locales['pl'] = {
 	['in_vehicle'] = '~r~Wyjdź z pojazdu!',
 	['vehicle_broken'] = '~r~Auto jest zbyt zniszczone !',
 	['not_good_veh'] = '~r~Musisz być w pojeździe służbowym aby rozpocząć prace',
-	['stop_npc'] = 'Action ~r~impossible~s~ : Rendez-vous au dépôt',
+	['stop_npc'] = '~r~Wracaj do bazy!',
 }
