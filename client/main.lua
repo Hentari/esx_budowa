@@ -82,7 +82,7 @@ OnJob = false
 if cancel then
   ESX.ShowNotification(_U('cancel_mission'))
 else
-  TriggerServerEvent('esx_gardener:GiveItem')
+  TriggerServerEvent('esx_budowa:GiveItem')
   StartNPCJob()
   Done = true
 end
@@ -248,7 +248,7 @@ end
 end
 
 -- Quand le joueur entre dans la zone
-AddEventHandler('esx_gardener:hasEnteredMarker', function(zone)
+AddEventHandler('esx_budowa:hasEnteredMarker', function(zone)
 
 if zone == 'Cloakroom' then
 CurrentAction = 'cloakroom_menu'
@@ -279,10 +279,10 @@ end
 end)
 
 -- Quand le joueur sort de la zone
-AddEventHandler('esx_gardener:hasExitedMarker', function(zone)
+AddEventHandler('esx_budowa:hasExitedMarker', function(zone)
 
 if zone == 'Vente' then
-TriggerServerEvent('esx_gardener:stopVente')
+TriggerServerEvent('esx_budowa:stopVente')
 end
 CurrentAction = nil
 ESX.UI.Menu.CloseAll()
@@ -412,11 +412,11 @@ end
 if (isInMarker and not HasAlreadyEnteredMarker) or (isInMarker and LastZone ~= currentZone) then
 HasAlreadyEnteredMarker = true
 LastZone = currentZone
-TriggerEvent('esx_gardener:hasEnteredMarker', currentZone)
+TriggerEvent('esx_budowa:hasEnteredMarker', currentZone)
 end
 if not isInMarker and HasAlreadyEnteredMarker then
 HasAlreadyEnteredMarker = false
-TriggerEvent('esx_gardener:hasExitedMarker', LastZone)
+TriggerEvent('esx_budowa:hasExitedMarker', LastZone)
 end
 end
 end
@@ -448,7 +448,7 @@ VehicleMenu()
 end
 end
 if CurrentAction == 'vente' then
-TriggerServerEvent('esx_gardener:startVente')
+TriggerServerEvent('esx_budowa:startVente')
 end
 if CurrentAction == 'delete_vehicle' then
 local playerPed = GetPlayerPed(-1)
