@@ -3,8 +3,8 @@ local PlayersVente			 = {}
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-RegisterServerEvent('esx_gardener:GiveItem')
-AddEventHandler('esx_gardener:GiveItem', function()
+RegisterServerEvent('esx_budowa:GiveItem')
+AddEventHandler('esx_budowa:GiveItem', function()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 
@@ -49,8 +49,8 @@ local function Vente(source)
 	end)
 end
 
-RegisterServerEvent('esx_gardener:startVente')
-AddEventHandler('esx_gardener:startVente', function()
+RegisterServerEvent('esx_budowa:startVente')
+AddEventHandler('esx_budowa:startVente', function()
 
 	local _source = source
 
@@ -64,8 +64,8 @@ AddEventHandler('esx_gardener:startVente', function()
 	end
 end)
 
-RegisterServerEvent('esx_gardener:stopVente')
-AddEventHandler('esx_gardener:stopVente', function()
+RegisterServerEvent('esx_budowa:stopVente')
+AddEventHandler('esx_budowa:stopVente', function()
 
 	local _source = source
 
